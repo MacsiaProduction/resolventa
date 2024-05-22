@@ -18,13 +18,23 @@ git clone https://github.com/joom/WangsAlgorithm.git
 cd WangsAlgorithm
 ```
 
+Установка `stack`:
+```bash
+wget -qO- https://get.haskellstack.org/ | sh
+```
+
 3. После этого, скомпилируйте проект с помощью `stack`:
 
 ```bash
 stack build
 ```
 
-4. Затем, найдите исполняемый файл и переименуйте его в `wang`, после чего замените лежащий в папке `raw`.
+4. Затем, найдите исполняемый файл (путь выдаст вам в конце stack) и переименуйте его в `wang`, после чего замените лежащий в папке `raw`.
+
+Не забудьте:
+```bash
+chmod +x ./raw/wang
+```
 
 ## Шаг 2: Установка pdflatex и texlive-science
 
@@ -38,3 +48,4 @@ sudo apt-get install texlive-latex-base texlive-science
 ## Примечание
 
 Серверная часть была протестирована и разрабатывалась на Ubuntu Linux. Если у вас возникнут проблемы при установке на других системах, рекомендуется использовать Ubuntu.
+(И если stack не заведется то версию lts (не Ubuntu!) поменяйте на 22.22 в файле .yaml)
