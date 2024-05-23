@@ -19,10 +19,11 @@ RUN stack build
 # Stage 2: Build the final image with Java application
 FROM openjdk:17-jdk-slim
 
-WORKDIR app
+WORKDIR /app
 
 RUN apt-get update \
-    && apt-get install -y \
+    && apt-get install -y  \
+    --no-install-recommends\
         texlive-latex-base \
         texlive-science \
         curl \
