@@ -1,5 +1,5 @@
 # Stage 1: Build Haskell application
-FROM haskell:8.0.1 as haskell-builder
+FROM haskell:8.0.2 as haskell-builder
 
 # Set the working directory inside the container
 WORKDIR /app
